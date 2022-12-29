@@ -1,5 +1,6 @@
 const express = require('express');
-const cors = require('cors')
+const cors = require('cors');
+const helmet = require('helmet')
 
 // Import Routes
 const postRouter = require('./routes/postRoute')
