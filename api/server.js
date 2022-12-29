@@ -1,16 +1,16 @@
 const express = require('express');
 const cors = require('cors');
-const helmet = require('helmet')
+const helmet = require('helmet');
+const server = express()
 
 // Import Routes
 const postRouter = require('./routes/postRoute')
 
-const server = express()
 
-app.use(cors())
-app.use(helmet())
+server.use(helmet())
+server.use(cors())
 server.use(express.json())
-server.use('/api/posts', postRouter)
-app.options('*', cors())
 
-module.exports = server
+server.use('/api/posts', postRouter)
+
+module.exports = server;
