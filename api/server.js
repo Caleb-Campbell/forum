@@ -7,7 +7,8 @@ const postRouter = require('./routes/postRoute')
 
 const server = express()
 
-server.use(cors)
+server.use(cors())
+server.use(helmet())
 server.use(express.json())
 server.use('/api/posts', postRouter)
 
