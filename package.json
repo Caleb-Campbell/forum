@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Caleb-Campbell/forum/issues"
   },
-  "homepage": "https://github.com/Caleb-Campbell/forum#readme"
+  "homepage": "https://github.com/Caleb-Campbell/forum#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
