@@ -1,11 +1,18 @@
 const router = require('express').Router()
+const data = require('./data/data.js')
+
 
 router.get('/', (req, res) => {
-    res.status(200).json({
-        message: 'successful fetch',
-        posts: [{author: 'Admin', text: 'Hey there bbgurl'}, {author: 'Response', text: 'Hey there bbgurl back at you'}]
-        
-    })
+    res.status(200).json(data)
+})
+
+router.post('/', (req, res) => {
+    const {author, text} = req.body
+    const newPost = {
+        author: author,
+        text: text
+    }
+    data.posts.push(newPost)
 })
 
 module.exports = router
