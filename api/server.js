@@ -11,5 +11,6 @@ app.use(cors())
 app.use(helmet())
 server.use(express.json())
 server.use('/api/posts', postRouter)
+app.options('*', cors())
 
 module.exports = server
