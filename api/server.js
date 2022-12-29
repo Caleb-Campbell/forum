@@ -4,7 +4,7 @@ const helmet = require('helmet');
 const server = express()
 
 // Import Routes
-const postRouter = require('./routes/postRoute')
+const postRouter = require('./routes/postRoute');
 
 
 server.use(helmet())
